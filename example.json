@@ -1,0 +1,1973 @@
+{
+    "timestamp": "2024-04-04T08:39:59.712473827+03:00",
+    "debian_version": "12.5\n",
+    "architecture": "x86_64",
+    "kernel_version": "6.1.0-18-amd64",
+    "installed_modules": [
+        "ac",
+        "aesni_intel",
+        "ahci",
+        "autofs4",
+        "battery",
+        "binfmt_misc",
+        "button",
+        "configfs",
+        "crc16",
+        "crc32_pclmul",
+        "crc32c_generic",
+        "crc32c_intel",
+        "crc64",
+        "crc64_rocksoft",
+        "crc_t10dif",
+        "crct10dif_common",
+        "crct10dif_generic",
+        "crct10dif_pclmul",
+        "cryptd",
+        "crypto_simd",
+        "dm_mod",
+        "drm",
+        "drm_kms_helper",
+        "drm_ttm_helper",
+        "e1000",
+        "efi_pstore",
+        "evdev",
+        "ext4",
+        "floppy",
+        "fuse",
+        "ghash_clmulni_intel",
+        "i2c_piix4",
+        "intel_pmc_core",
+        "intel_rapl_common",
+        "intel_rapl_msr",
+        "ip_tables",
+        "jbd2",
+        "joydev",
+        "libahci",
+        "libata",
+        "loop",
+        "mbcache",
+        "psmouse",
+        "rapl",
+        "scsi_common",
+        "scsi_mod",
+        "sd_mod",
+        "serio_raw",
+        "sg",
+        "sha1_ssse3",
+        "sha256_ssse3",
+        "sha512_generic",
+        "sha512_ssse3",
+        "t10_pi",
+        "ttm",
+        "vboxguest",
+        "vboxsf",
+        "video",
+        "vmwgfx",
+        "wmi",
+        "x_tables"
+    ],
+    "network_config": {
+        "ip_addresses": [
+            "10.0.2.15"
+        ],
+        "interfaces": [
+            "eth0",
+            "lo"
+        ],
+        "routing_info": "default via 10.0.2.2 dev eth0 \n10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15"
+    },
+    "units": [
+        {
+            "name": "-.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Root Mount"
+        },
+        {
+            "name": "-.slice",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Root Slice"
+        },
+        {
+            "name": "apparmor.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Load AppArmor profiles"
+        },
+        {
+            "name": "apt-daily-upgrade.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Daily apt upgrade and clean activities"
+        },
+        {
+            "name": "apt-daily.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Daily apt download activities"
+        },
+        {
+            "name": "basic.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Basic System"
+        },
+        {
+            "name": "chrony.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "chrony, an NTP client/server"
+        },
+        {
+            "name": "cron.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Regular background program processing daemon"
+        },
+        {
+            "name": "cryptsetup.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Local Encrypted Volumes"
+        },
+        {
+            "name": "dbus.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "D-Bus System Message Bus"
+        },
+        {
+            "name": "dbus.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "D-Bus System Message Bus Socket"
+        },
+        {
+            "name": "dev-hugepages.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Huge Pages File System"
+        },
+        {
+            "name": "dev-mqueue.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "POSIX Message Queue File System"
+        },
+        {
+            "name": "dpkg-db-backup.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Daily dpkg database backup timer"
+        },
+        {
+            "name": "e2scrub_all.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Periodic ext4 Online Metadata Check for All Filesystems"
+        },
+        {
+            "name": "fstrim.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Discard unused blocks once a week"
+        },
+        {
+            "name": "generate-sshd-host-keys.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Generate sshd host keys on first boot of a vagrant environment"
+        },
+        {
+            "name": "getty.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Login Prompts"
+        },
+        {
+            "name": "getty@tty1.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Getty on tty1"
+        },
+        {
+            "name": "graphical.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Graphical Interface"
+        },
+        {
+            "name": "ifup@eth0.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "ifup for eth0"
+        },
+        {
+            "name": "ifupdown-pre.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Helper to synchronize boot up for ifupdown"
+        },
+        {
+            "name": "init.scope",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "System and Service Manager"
+        },
+        {
+            "name": "integritysetup.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Local Integrity Protected Volumes"
+        },
+        {
+            "name": "kmod-static-nodes.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Create List of Static Device Nodes"
+        },
+        {
+            "name": "local-fs-pre.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Preparation for Local File Systems"
+        },
+        {
+            "name": "local-fs.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Local File Systems"
+        },
+        {
+            "name": "logrotate.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Daily rotation of log files"
+        },
+        {
+            "name": "man-db.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Daily man-db regeneration"
+        },
+        {
+            "name": "multi-user.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Multi-User System"
+        },
+        {
+            "name": "network.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Network"
+        },
+        {
+            "name": "networking.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Raise network interfaces"
+        },
+        {
+            "name": "paths.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Path Units"
+        },
+        {
+            "name": "proc-sys-fs-binfmt_misc.automount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Arbitrary Executable File Formats File System Automount Point"
+        },
+        {
+            "name": "proc-sys-fs-binfmt_misc.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Arbitrary Executable File Formats File System"
+        },
+        {
+            "name": "remote-fs.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Remote File Systems"
+        },
+        {
+            "name": "rsyslog.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "System Logging Service"
+        },
+        {
+            "name": "run-credentials-systemd\\x2dsysctl.service.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/run/credentials/systemd-sysctl.service"
+        },
+        {
+            "name": "run-credentials-systemd\\x2dsysusers.service.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/run/credentials/systemd-sysusers.service"
+        },
+        {
+            "name": "run-credentials-systemd\\x2dtmpfiles\\x2dsetup.service.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/run/credentials/systemd-tmpfiles-setup.service"
+        },
+        {
+            "name": "run-credentials-systemd\\x2dtmpfiles\\x2dsetup\\x2ddev.service.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/run/credentials/systemd-tmpfiles-setup-dev.service"
+        },
+        {
+            "name": "run-user-1000.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/run/user/1000"
+        },
+        {
+            "name": "session-17.scope",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Session 17 of User vagrant"
+        },
+        {
+            "name": "session-36.scope",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Session 36 of User vagrant"
+        },
+        {
+            "name": "set-grub-install-device.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Set Grub install device in debconf on first boot"
+        },
+        {
+            "name": "slices.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Slice Units"
+        },
+        {
+            "name": "sockets.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Socket Units"
+        },
+        {
+            "name": "ssh.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "OpenBSD Secure Shell server"
+        },
+        {
+            "name": "swap.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Swaps"
+        },
+        {
+            "name": "sys-devices-pci0000:00-0000:00:03.0-net-eth0.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter)"
+        },
+        {
+            "name": "sys-devices-pci0000:00-0000:00:0d.0-ata1-host0-target0:0:0-0:0:0:0-block-sda-sda1.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "VBOX_HARDDISK 1"
+        },
+        {
+            "name": "sys-devices-pci0000:00-0000:00:0d.0-ata1-host0-target0:0:0-0:0:0:0-block-sda.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "VBOX_HARDDISK"
+        },
+        {
+            "name": "sys-devices-platform-serial8250-tty-ttyS0.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/sys/devices/platform/serial8250/tty/ttyS0"
+        },
+        {
+            "name": "sys-devices-platform-serial8250-tty-ttyS1.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/sys/devices/platform/serial8250/tty/ttyS1"
+        },
+        {
+            "name": "sys-devices-platform-serial8250-tty-ttyS2.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/sys/devices/platform/serial8250/tty/ttyS2"
+        },
+        {
+            "name": "sys-devices-platform-serial8250-tty-ttyS3.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/sys/devices/platform/serial8250/tty/ttyS3"
+        },
+        {
+            "name": "sys-fs-fuse-connections.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "FUSE Control File System"
+        },
+        {
+            "name": "sys-kernel-config.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Kernel Configuration File System"
+        },
+        {
+            "name": "sys-kernel-debug.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Kernel Debug File System"
+        },
+        {
+            "name": "sys-kernel-tracing.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Kernel Trace File System"
+        },
+        {
+            "name": "sys-module-configfs.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/sys/module/configfs"
+        },
+        {
+            "name": "sys-module-fuse.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/sys/module/fuse"
+        },
+        {
+            "name": "sys-subsystem-net-devices-eth0.device",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter)"
+        },
+        {
+            "name": "sysinit.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "System Initialization"
+        },
+        {
+            "name": "syslog.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Syslog Socket"
+        },
+        {
+            "name": "system-getty.slice",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Slice /system/getty"
+        },
+        {
+            "name": "system-modprobe.slice",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Slice /system/modprobe"
+        },
+        {
+            "name": "system.slice",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "System Slice"
+        },
+        {
+            "name": "systemd-ask-password-console.path",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Dispatch Password Requests to Console Directory Watch"
+        },
+        {
+            "name": "systemd-ask-password-wall.path",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Forward Password Requests to Wall Directory Watch"
+        },
+        {
+            "name": "systemd-binfmt.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Set Up Additional Binary Formats"
+        },
+        {
+            "name": "systemd-fsckd.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "fsck to fsckd communication Socket"
+        },
+        {
+            "name": "systemd-initctl.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "initctl Compatibility Named Pipe"
+        },
+        {
+            "name": "systemd-journal-flush.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Flush Journal to Persistent Storage"
+        },
+        {
+            "name": "systemd-journald-audit.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Journal Audit Socket"
+        },
+        {
+            "name": "systemd-journald-dev-log.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Journal Socket (/dev/log)"
+        },
+        {
+            "name": "systemd-journald.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Journal Service"
+        },
+        {
+            "name": "systemd-journald.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Journal Socket"
+        },
+        {
+            "name": "systemd-logind.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "User Login Management"
+        },
+        {
+            "name": "systemd-machine-id-commit.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Commit a transient machine-id on disk"
+        },
+        {
+            "name": "systemd-modules-load.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Load Kernel Modules"
+        },
+        {
+            "name": "systemd-random-seed.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Load/Save Random Seed"
+        },
+        {
+            "name": "systemd-remount-fs.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Remount Root and Kernel File Systems"
+        },
+        {
+            "name": "systemd-sysctl.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Apply Kernel Variables"
+        },
+        {
+            "name": "systemd-sysusers.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Create System Users"
+        },
+        {
+            "name": "systemd-tmpfiles-clean.timer",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Daily Cleanup of Temporary Directories"
+        },
+        {
+            "name": "systemd-tmpfiles-setup-dev.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Create Static Device Nodes in /dev"
+        },
+        {
+            "name": "systemd-tmpfiles-setup.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Create Volatile Files and Directories"
+        },
+        {
+            "name": "systemd-udev-trigger.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Coldplug All udev Devices"
+        },
+        {
+            "name": "systemd-udevd-control.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "udev Control Socket"
+        },
+        {
+            "name": "systemd-udevd-kernel.socket",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "udev Kernel Socket"
+        },
+        {
+            "name": "systemd-udevd.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Rule-based Manager for Device Events and Files"
+        },
+        {
+            "name": "systemd-update-utmp.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Record System Boot/Shutdown in UTMP"
+        },
+        {
+            "name": "systemd-user-sessions.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Permit User Sessions"
+        },
+        {
+            "name": "time-set.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "System Time Set"
+        },
+        {
+            "name": "time-sync.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "System Time Synchronized"
+        },
+        {
+            "name": "timers.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Timer Units"
+        },
+        {
+            "name": "unattended-upgrades.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Unattended Upgrades Shutdown"
+        },
+        {
+            "name": "user-1000.slice",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "User Slice of UID 1000"
+        },
+        {
+            "name": "user-runtime-dir@1000.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "User Runtime Directory /run/user/1000"
+        },
+        {
+            "name": "user.slice",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "User and Session Slice"
+        },
+        {
+            "name": "user@1000.service",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "User Manager for UID 1000"
+        },
+        {
+            "name": "vagrant.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/vagrant"
+        },
+        {
+            "name": "veritysetup.target",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Local Verity Protected Volumes"
+        },
+        {
+            "name": "104",
+            "load_state": "loaded",
+            "active_state": "units",
+            "description": "Pass --all to see loaded but inactive units, too."
+        },
+        {
+            "name": "ACTIVE",
+            "load_state": "=",
+            "active_state": "The",
+            "description": "unit activation state, i.e. generalization of SUB."
+        },
+        {
+            "name": "LOAD",
+            "load_state": "=",
+            "active_state": "Reflects",
+            "description": "the unit definition was properly loaded."
+        },
+        {
+            "name": "SUB",
+            "load_state": "=",
+            "active_state": "The",
+            "description": "unit activation state, values depend on unit type."
+        },
+        {
+            "name": "To",
+            "load_state": "show",
+            "active_state": "all",
+            "description": "unit files use 'systemctl list-unit-files'."
+        }
+    ],
+    "libraries": [
+        {
+            "name": "adduser",
+            "version": "3.134"
+        },
+        {
+            "name": "apparmor",
+            "version": "3.0.8-3"
+        },
+        {
+            "name": "apt",
+            "version": "2.6.1"
+        },
+        {
+            "name": "apt-listchanges",
+            "version": "3.24"
+        },
+        {
+            "name": "apt-utils",
+            "version": "2.6.1"
+        },
+        {
+            "name": "base-files",
+            "version": "12.4+deb12u5"
+        },
+        {
+            "name": "base-passwd",
+            "version": "3.6.1"
+        },
+        {
+            "name": "bash",
+            "version": "5.2.15-2+b2"
+        },
+        {
+            "name": "bash-completion",
+            "version": "1:2.11-6"
+        },
+        {
+            "name": "bind9-dnsutils",
+            "version": "1:9.18.19-1~deb12u1"
+        },
+        {
+            "name": "bind9-host",
+            "version": "1:9.18.19-1~deb12u1"
+        },
+        {
+            "name": "bind9-libs:amd64",
+            "version": "1:9.18.19-1~deb12u1"
+        },
+        {
+            "name": "bsdextrautils",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "bsdutils",
+            "version": "1:2.38.1-5+b1"
+        },
+        {
+            "name": "bzip2",
+            "version": "1.0.8-5+b1"
+        },
+        {
+            "name": "ca-certificates",
+            "version": "20230311"
+        },
+        {
+            "name": "chrony",
+            "version": "4.3-2+deb12u1"
+        },
+        {
+            "name": "cloud-guest-utils",
+            "version": "0.33-1"
+        },
+        {
+            "name": "cloud-image-utils",
+            "version": "0.33-1"
+        },
+        {
+            "name": "cloud-initramfs-growroot",
+            "version": "0.18.debian13"
+        },
+        {
+            "name": "cloud-utils",
+            "version": "0.33-1"
+        },
+        {
+            "name": "coreutils",
+            "version": "9.1-1"
+        },
+        {
+            "name": "cpio",
+            "version": "2.13+dfsg-7.1"
+        },
+        {
+            "name": "cron",
+            "version": "3.0pl1-162"
+        },
+        {
+            "name": "cron-daemon-common",
+            "version": "3.0pl1-162"
+        },
+        {
+            "name": "dash",
+            "version": "0.5.12-2"
+        },
+        {
+            "name": "dbus",
+            "version": "1.14.10-1~deb12u1"
+        },
+        {
+            "name": "dbus-bin",
+            "version": "1.14.10-1~deb12u1"
+        },
+        {
+            "name": "dbus-daemon",
+            "version": "1.14.10-1~deb12u1"
+        },
+        {
+            "name": "dbus-session-bus-common",
+            "version": "1.14.10-1~deb12u1"
+        },
+        {
+            "name": "dbus-system-bus-common",
+            "version": "1.14.10-1~deb12u1"
+        },
+        {
+            "name": "debconf",
+            "version": "1.5.82"
+        },
+        {
+            "name": "debconf-i18n",
+            "version": "1.5.82"
+        },
+        {
+            "name": "debian-archive-keyring",
+            "version": "2023.3+deb12u1"
+        },
+        {
+            "name": "debian-faq",
+            "version": "11.1"
+        },
+        {
+            "name": "debianutils",
+            "version": "5.7-0.5~deb12u1"
+        },
+        {
+            "name": "diffutils",
+            "version": "1:3.8-4"
+        },
+        {
+            "name": "distro-info-data",
+            "version": "0.58+deb12u1"
+        },
+        {
+            "name": "dmidecode",
+            "version": "3.4-1"
+        },
+        {
+            "name": "dmsetup",
+            "version": "2:1.02.185-2"
+        },
+        {
+            "name": "doc-debian",
+            "version": "11.3+nmu1"
+        },
+        {
+            "name": "dpkg",
+            "version": "1.21.22"
+        },
+        {
+            "name": "e2fsprogs",
+            "version": "1.47.0-2"
+        },
+        {
+            "name": "fdisk",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "file",
+            "version": "1:5.44-3"
+        },
+        {
+            "name": "findutils",
+            "version": "4.9.0-4"
+        },
+        {
+            "name": "gcc-12-base:amd64",
+            "version": "12.2.0-14"
+        },
+        {
+            "name": "genisoimage",
+            "version": "9:1.1.11-3.4"
+        },
+        {
+            "name": "gettext-base",
+            "version": "0.21-12"
+        },
+        {
+            "name": "gpgv",
+            "version": "2.2.40-1.1"
+        },
+        {
+            "name": "grep",
+            "version": "3.8-5"
+        },
+        {
+            "name": "groff-base",
+            "version": "1.22.4-10"
+        },
+        {
+            "name": "grub-common",
+            "version": "2.06-13+deb12u1"
+        },
+        {
+            "name": "grub-pc",
+            "version": "2.06-13+deb12u1"
+        },
+        {
+            "name": "grub-pc-bin",
+            "version": "2.06-13+deb12u1"
+        },
+        {
+            "name": "grub2-common",
+            "version": "2.06-13+deb12u1"
+        },
+        {
+            "name": "gzip",
+            "version": "1.12-1"
+        },
+        {
+            "name": "hostname",
+            "version": "3.23+nmu1"
+        },
+        {
+            "name": "ifupdown",
+            "version": "0.8.41"
+        },
+        {
+            "name": "inetutils-telnet",
+            "version": "2:2.4-2+deb12u1"
+        },
+        {
+            "name": "init",
+            "version": "1.65.2"
+        },
+        {
+            "name": "init-system-helpers",
+            "version": "1.65.2"
+        },
+        {
+            "name": "initramfs-tools",
+            "version": "0.142"
+        },
+        {
+            "name": "initramfs-tools-core",
+            "version": "0.142"
+        },
+        {
+            "name": "iproute2",
+            "version": "6.1.0-3"
+        },
+        {
+            "name": "iptables",
+            "version": "1.8.9-2"
+        },
+        {
+            "name": "iputils-ping",
+            "version": "3:20221126-1"
+        },
+        {
+            "name": "isc-dhcp-client",
+            "version": "4.4.3-P1-2"
+        },
+        {
+            "name": "isc-dhcp-common",
+            "version": "4.4.3-P1-2"
+        },
+        {
+            "name": "klibc-utils",
+            "version": "2.0.12-1"
+        },
+        {
+            "name": "kmod",
+            "version": "30+20221128-1"
+        },
+        {
+            "name": "krb5-locales",
+            "version": "1.20.1-2+deb12u1"
+        },
+        {
+            "name": "less",
+            "version": "590-2"
+        },
+        {
+            "name": "libacl1:amd64",
+            "version": "2.3.1-3"
+        },
+        {
+            "name": "libaio1:amd64",
+            "version": "0.3.113-4"
+        },
+        {
+            "name": "libapparmor1:amd64",
+            "version": "3.0.8-3"
+        },
+        {
+            "name": "libapt-pkg6.0:amd64",
+            "version": "2.6.1"
+        },
+        {
+            "name": "libargon2-1:amd64",
+            "version": "0~20171227-0.3+deb12u1"
+        },
+        {
+            "name": "libattr1:amd64",
+            "version": "1:2.5.1-4"
+        },
+        {
+            "name": "libaudit-common",
+            "version": "1:3.0.9-1"
+        },
+        {
+            "name": "libaudit1:amd64",
+            "version": "1:3.0.9-1"
+        },
+        {
+            "name": "libblkid1:amd64",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "libbpf1:amd64",
+            "version": "1:1.1.0-1"
+        },
+        {
+            "name": "libbrotli1:amd64",
+            "version": "1.0.9-2+b6"
+        },
+        {
+            "name": "libbsd0:amd64",
+            "version": "0.11.7-2"
+        },
+        {
+            "name": "libbz2-1.0:amd64",
+            "version": "1.0.8-5+b1"
+        },
+        {
+            "name": "libc-bin",
+            "version": "2.36-9+deb12u4"
+        },
+        {
+            "name": "libc-l10n",
+            "version": "2.36-9+deb12u4"
+        },
+        {
+            "name": "libc6:amd64",
+            "version": "2.36-9+deb12u4"
+        },
+        {
+            "name": "libcap-ng0:amd64",
+            "version": "0.8.3-1+b3"
+        },
+        {
+            "name": "libcap2:amd64",
+            "version": "1:2.66-4"
+        },
+        {
+            "name": "libcap2-bin",
+            "version": "1:2.66-4"
+        },
+        {
+            "name": "libcbor0.8:amd64",
+            "version": "0.8.0-2+b1"
+        },
+        {
+            "name": "libcom-err2:amd64",
+            "version": "1.47.0-2"
+        },
+        {
+            "name": "libcrypt1:amd64",
+            "version": "1:4.4.33-2"
+        },
+        {
+            "name": "libcryptsetup12:amd64",
+            "version": "2:2.6.1-4~deb12u2"
+        },
+        {
+            "name": "libcurl3-gnutls:amd64",
+            "version": "7.88.1-10+deb12u5"
+        },
+        {
+            "name": "libdb5.3:amd64",
+            "version": "5.3.28+dfsg2-1"
+        },
+        {
+            "name": "libdbus-1-3:amd64",
+            "version": "1.14.10-1~deb12u1"
+        },
+        {
+            "name": "libdebconfclient0:amd64",
+            "version": "0.270"
+        },
+        {
+            "name": "libdevmapper1.02.1:amd64",
+            "version": "2:1.02.185-2"
+        },
+        {
+            "name": "libedit2:amd64",
+            "version": "3.1-20221030-2"
+        },
+        {
+            "name": "libefiboot1:amd64",
+            "version": "37-6"
+        },
+        {
+            "name": "libefivar1:amd64",
+            "version": "37-6"
+        },
+        {
+            "name": "libelf1:amd64",
+            "version": "0.188-2.1"
+        },
+        {
+            "name": "libestr0:amd64",
+            "version": "0.1.11-1"
+        },
+        {
+            "name": "libexpat1:amd64",
+            "version": "2.5.0-1"
+        },
+        {
+            "name": "libext2fs2:amd64",
+            "version": "1.47.0-2"
+        },
+        {
+            "name": "libfastjson4:amd64",
+            "version": "1.2304.0-1"
+        },
+        {
+            "name": "libfdisk1:amd64",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "libffi8:amd64",
+            "version": "3.4.4-1"
+        },
+        {
+            "name": "libfido2-1:amd64",
+            "version": "1.12.0-2+b1"
+        },
+        {
+            "name": "libfile-find-rule-perl",
+            "version": "0.34-3"
+        },
+        {
+            "name": "libfreetype6:amd64",
+            "version": "2.12.1+dfsg-5"
+        },
+        {
+            "name": "libfstrm0:amd64",
+            "version": "0.6.1-1"
+        },
+        {
+            "name": "libfuse2:amd64",
+            "version": "2.9.9-6+b1"
+        },
+        {
+            "name": "libfuse3-3:amd64",
+            "version": "3.14.0-4"
+        },
+        {
+            "name": "libgcc-s1:amd64",
+            "version": "12.2.0-14"
+        },
+        {
+            "name": "libgcrypt20:amd64",
+            "version": "1.10.1-3"
+        },
+        {
+            "name": "libgdbm-compat4:amd64",
+            "version": "1.23-3"
+        },
+        {
+            "name": "libgdbm6:amd64",
+            "version": "1.23-3"
+        },
+        {
+            "name": "libglib2.0-0:amd64",
+            "version": "2.74.6-2"
+        },
+        {
+            "name": "libgmp10:amd64",
+            "version": "2:6.2.1+dfsg1-1.1"
+        },
+        {
+            "name": "libgnutls30:amd64",
+            "version": "3.7.9-2+deb12u2"
+        },
+        {
+            "name": "libgpg-error0:amd64",
+            "version": "1.46-1"
+        },
+        {
+            "name": "libgssapi-krb5-2:amd64",
+            "version": "1.20.1-2+deb12u1"
+        },
+        {
+            "name": "libhogweed6:amd64",
+            "version": "3.8.1-2"
+        },
+        {
+            "name": "libicu72:amd64",
+            "version": "72.1-3"
+        },
+        {
+            "name": "libidn2-0:amd64",
+            "version": "2.3.3-1+b1"
+        },
+        {
+            "name": "libip4tc2:amd64",
+            "version": "1.8.9-2"
+        },
+        {
+            "name": "libip6tc2:amd64",
+            "version": "1.8.9-2"
+        },
+        {
+            "name": "libjansson4:amd64",
+            "version": "2.14-2"
+        },
+        {
+            "name": "libjemalloc2:amd64",
+            "version": "5.3.0-1"
+        },
+        {
+            "name": "libjson-c5:amd64",
+            "version": "0.16-2"
+        },
+        {
+            "name": "libk5crypto3:amd64",
+            "version": "1.20.1-2+deb12u1"
+        },
+        {
+            "name": "libkeyutils1:amd64",
+            "version": "1.6.3-2"
+        },
+        {
+            "name": "libklibc:amd64",
+            "version": "2.0.12-1"
+        },
+        {
+            "name": "libkmod2:amd64",
+            "version": "30+20221128-1"
+        },
+        {
+            "name": "libkrb5-3:amd64",
+            "version": "1.20.1-2+deb12u1"
+        },
+        {
+            "name": "libkrb5support0:amd64",
+            "version": "1.20.1-2+deb12u1"
+        },
+        {
+            "name": "libldap-2.5-0:amd64",
+            "version": "2.5.13+dfsg-5"
+        },
+        {
+            "name": "liblmdb0:amd64",
+            "version": "0.9.24-1"
+        },
+        {
+            "name": "liblocale-gettext-perl",
+            "version": "1.07-5"
+        },
+        {
+            "name": "liblockfile-bin",
+            "version": "1.17-1+b1"
+        },
+        {
+            "name": "liblognorm5:amd64",
+            "version": "2.0.6-4"
+        },
+        {
+            "name": "liblz4-1:amd64",
+            "version": "1.9.4-1"
+        },
+        {
+            "name": "liblzma5:amd64",
+            "version": "5.4.1-0.2"
+        },
+        {
+            "name": "libmagic-mgc",
+            "version": "1:5.44-3"
+        },
+        {
+            "name": "libmagic1:amd64",
+            "version": "1:5.44-3"
+        },
+        {
+            "name": "libmaxminddb0:amd64",
+            "version": "1.7.1-1"
+        },
+        {
+            "name": "libmd0:amd64",
+            "version": "1.0.4-2"
+        },
+        {
+            "name": "libmnl0:amd64",
+            "version": "1.0.4-3"
+        },
+        {
+            "name": "libmount1:amd64",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "libncursesw6:amd64",
+            "version": "6.4-4"
+        },
+        {
+            "name": "libnetfilter-conntrack3:amd64",
+            "version": "1.0.9-3"
+        },
+        {
+            "name": "libnettle8:amd64",
+            "version": "3.8.1-2"
+        },
+        {
+            "name": "libnewt0.52:amd64",
+            "version": "0.52.23-1+b1"
+        },
+        {
+            "name": "libnfnetlink0:amd64",
+            "version": "1.0.2-2"
+        },
+        {
+            "name": "libnftables1:amd64",
+            "version": "1.0.6-2+deb12u2"
+        },
+        {
+            "name": "libnftnl11:amd64",
+            "version": "1.2.4-2"
+        },
+        {
+            "name": "libnghttp2-14:amd64",
+            "version": "1.52.0-1+deb12u1"
+        },
+        {
+            "name": "libnsl2:amd64",
+            "version": "1.3.0-2"
+        },
+        {
+            "name": "libnss-systemd:amd64",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "libnuma1:amd64",
+            "version": "2.0.16-1"
+        },
+        {
+            "name": "libnumber-compare-perl",
+            "version": "0.03-3"
+        },
+        {
+            "name": "libp11-kit0:amd64",
+            "version": "0.24.1-2"
+        },
+        {
+            "name": "libpam-modules:amd64",
+            "version": "1.5.2-6+deb12u1"
+        },
+        {
+            "name": "libpam-modules-bin",
+            "version": "1.5.2-6+deb12u1"
+        },
+        {
+            "name": "libpam-runtime",
+            "version": "1.5.2-6+deb12u1"
+        },
+        {
+            "name": "libpam-systemd:amd64",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "libpam0g:amd64",
+            "version": "1.5.2-6+deb12u1"
+        },
+        {
+            "name": "libpci3:amd64",
+            "version": "1:3.9.0-4"
+        },
+        {
+            "name": "libpcre2-8-0:amd64",
+            "version": "10.42-1"
+        },
+        {
+            "name": "libperl5.36:amd64",
+            "version": "5.36.0-7+deb12u1"
+        },
+        {
+            "name": "libpipeline1:amd64",
+            "version": "1.5.7-1"
+        },
+        {
+            "name": "libpng16-16:amd64",
+            "version": "1.6.39-2"
+        },
+        {
+            "name": "libpopt0:amd64",
+            "version": "1.19+dfsg-1"
+        },
+        {
+            "name": "libproc2-0:amd64",
+            "version": "2:4.0.2-3"
+        },
+        {
+            "name": "libprotobuf-c1:amd64",
+            "version": "1.4.1-1+b1"
+        },
+        {
+            "name": "libpsl5:amd64",
+            "version": "0.21.2-1"
+        },
+        {
+            "name": "libpython3-stdlib:amd64",
+            "version": "3.11.2-1+b1"
+        },
+        {
+            "name": "libpython3.11-minimal:amd64",
+            "version": "3.11.2-6"
+        },
+        {
+            "name": "libpython3.11-stdlib:amd64",
+            "version": "3.11.2-6"
+        },
+        {
+            "name": "libreadline8:amd64",
+            "version": "8.2-1.3"
+        },
+        {
+            "name": "librtmp1:amd64",
+            "version": "2.4+20151223.gitfa8646d.1-2+b2"
+        },
+        {
+            "name": "libsasl2-2:amd64",
+            "version": "2.1.28+dfsg-10"
+        },
+        {
+            "name": "libsasl2-modules-db:amd64",
+            "version": "2.1.28+dfsg-10"
+        },
+        {
+            "name": "libseccomp2:amd64",
+            "version": "2.5.4-1+b3"
+        },
+        {
+            "name": "libselinux1:amd64",
+            "version": "3.4-1+b6"
+        },
+        {
+            "name": "libsemanage-common",
+            "version": "3.4-1"
+        },
+        {
+            "name": "libsemanage2:amd64",
+            "version": "3.4-1+b5"
+        },
+        {
+            "name": "libsepol2:amd64",
+            "version": "3.4-2.1"
+        },
+        {
+            "name": "libslang2:amd64",
+            "version": "2.3.3-3"
+        },
+        {
+            "name": "libsmartcols1:amd64",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "libsqlite3-0:amd64",
+            "version": "3.40.1-2"
+        },
+        {
+            "name": "libss2:amd64",
+            "version": "1.47.0-2"
+        },
+        {
+            "name": "libssh2-1:amd64",
+            "version": "1.10.0-3+b1"
+        },
+        {
+            "name": "libssl3:amd64",
+            "version": "3.0.11-1~deb12u2"
+        },
+        {
+            "name": "libstdc++6:amd64",
+            "version": "12.2.0-14"
+        },
+        {
+            "name": "libsystemd-shared:amd64",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "libsystemd0:amd64",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "libtasn1-6:amd64",
+            "version": "4.19.0-2"
+        },
+        {
+            "name": "libtext-charwidth-perl:amd64",
+            "version": "0.04-11"
+        },
+        {
+            "name": "libtext-glob-perl",
+            "version": "0.11-3"
+        },
+        {
+            "name": "libtext-iconv-perl:amd64",
+            "version": "1.7-8"
+        },
+        {
+            "name": "libtext-wrapi18n-perl",
+            "version": "0.06-10"
+        },
+        {
+            "name": "libtinfo6:amd64",
+            "version": "6.4-4"
+        },
+        {
+            "name": "libtirpc-common",
+            "version": "1.3.3+ds-1"
+        },
+        {
+            "name": "libtirpc3:amd64",
+            "version": "1.3.3+ds-1"
+        },
+        {
+            "name": "libuchardet0:amd64",
+            "version": "0.0.7-1"
+        },
+        {
+            "name": "libudev1:amd64",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "libunistring2:amd64",
+            "version": "1.0-2"
+        },
+        {
+            "name": "liburing2:amd64",
+            "version": "2.3-3"
+        },
+        {
+            "name": "libuuid1:amd64",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "libuv1:amd64",
+            "version": "1.44.2-1"
+        },
+        {
+            "name": "libwrap0:amd64",
+            "version": "7.6.q-32"
+        },
+        {
+            "name": "libxml2:amd64",
+            "version": "2.9.14+dfsg-1.3~deb12u1"
+        },
+        {
+            "name": "libxtables12:amd64",
+            "version": "1.8.9-2"
+        },
+        {
+            "name": "libxxhash0:amd64",
+            "version": "0.8.1-1"
+        },
+        {
+            "name": "libzstd1:amd64",
+            "version": "1.5.4+dfsg2-5"
+        },
+        {
+            "name": "linux-base",
+            "version": "4.9"
+        },
+        {
+            "name": "linux-image-6.1.0-18-amd64",
+            "version": "6.1.76-1"
+        },
+        {
+            "name": "linux-image-amd64",
+            "version": "6.1.76-1"
+        },
+        {
+            "name": "locales",
+            "version": "2.36-9+deb12u4"
+        },
+        {
+            "name": "login",
+            "version": "1:4.13+dfsg1-1+b1"
+        },
+        {
+            "name": "logrotate",
+            "version": "3.21.0-1"
+        },
+        {
+            "name": "logsave",
+            "version": "1.47.0-2"
+        },
+        {
+            "name": "lsb-release",
+            "version": "12.0-1"
+        },
+        {
+            "name": "lsof",
+            "version": "4.95.0-1"
+        },
+        {
+            "name": "mailcap",
+            "version": "3.70+nmu1"
+        },
+        {
+            "name": "man-db",
+            "version": "2.11.2-2"
+        },
+        {
+            "name": "manpages",
+            "version": "6.03-2"
+        },
+        {
+            "name": "mawk",
+            "version": "1.3.4.20200120-3.1"
+        },
+        {
+            "name": "media-types",
+            "version": "10.0.0"
+        },
+        {
+            "name": "mime-support",
+            "version": "3.66"
+        },
+        {
+            "name": "mount",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "nano",
+            "version": "7.2-1"
+        },
+        {
+            "name": "ncurses-base",
+            "version": "6.4-4"
+        },
+        {
+            "name": "ncurses-bin",
+            "version": "6.4-4"
+        },
+        {
+            "name": "ncurses-term",
+            "version": "6.4-4"
+        },
+        {
+            "name": "netbase",
+            "version": "6.4"
+        },
+        {
+            "name": "netcat-traditional",
+            "version": "1.10-47"
+        },
+        {
+            "name": "nftables",
+            "version": "1.0.6-2+deb12u2"
+        },
+        {
+            "name": "openssh-client",
+            "version": "1:9.2p1-2+deb12u2"
+        },
+        {
+            "name": "openssh-server",
+            "version": "1:9.2p1-2+deb12u2"
+        },
+        {
+            "name": "openssh-sftp-server",
+            "version": "1:9.2p1-2+deb12u2"
+        },
+        {
+            "name": "openssl",
+            "version": "3.0.11-1~deb12u2"
+        },
+        {
+            "name": "passwd",
+            "version": "1:4.13+dfsg1-1+b1"
+        },
+        {
+            "name": "pci.ids",
+            "version": "0.0~2023.04.11-1"
+        },
+        {
+            "name": "pciutils",
+            "version": "1:3.9.0-4"
+        },
+        {
+            "name": "perl",
+            "version": "5.36.0-7+deb12u1"
+        },
+        {
+            "name": "perl-base",
+            "version": "5.36.0-7+deb12u1"
+        },
+        {
+            "name": "perl-modules-5.36",
+            "version": "5.36.0-7+deb12u1"
+        },
+        {
+            "name": "procps",
+            "version": "2:4.0.2-3"
+        },
+        {
+            "name": "python-apt-common",
+            "version": "2.6.0"
+        },
+        {
+            "name": "python3",
+            "version": "3.11.2-1+b1"
+        },
+        {
+            "name": "python3-apt",
+            "version": "2.6.0"
+        },
+        {
+            "name": "python3-certifi",
+            "version": "2022.9.24-1"
+        },
+        {
+            "name": "python3-chardet",
+            "version": "5.1.0+dfsg-2"
+        },
+        {
+            "name": "python3-charset-normalizer",
+            "version": "3.0.1-2"
+        },
+        {
+            "name": "python3-dbus",
+            "version": "1.3.2-4+b1"
+        },
+        {
+            "name": "python3-debconf",
+            "version": "1.5.82"
+        },
+        {
+            "name": "python3-debian",
+            "version": "0.1.49"
+        },
+        {
+            "name": "python3-debianbts",
+            "version": "4.0.1"
+        },
+        {
+            "name": "python3-distro-info",
+            "version": "1.5+deb12u1"
+        },
+        {
+            "name": "python3-httplib2",
+            "version": "0.20.4-3"
+        },
+        {
+            "name": "python3-idna",
+            "version": "3.3-1"
+        },
+        {
+            "name": "python3-minimal",
+            "version": "3.11.2-1+b1"
+        },
+        {
+            "name": "python3-pkg-resources",
+            "version": "66.1.1-1"
+        },
+        {
+            "name": "python3-pycurl",
+            "version": "7.45.2-3"
+        },
+        {
+            "name": "python3-pyparsing",
+            "version": "3.0.9-1"
+        },
+        {
+            "name": "python3-pysimplesoap",
+            "version": "1.16.2-5"
+        },
+        {
+            "name": "python3-reportbug",
+            "version": "12.0.0"
+        },
+        {
+            "name": "python3-requests",
+            "version": "2.28.1+dfsg-1"
+        },
+        {
+            "name": "python3-six",
+            "version": "1.16.0-4"
+        },
+        {
+            "name": "python3-urllib3",
+            "version": "1.26.12-1"
+        },
+        {
+            "name": "python3.11",
+            "version": "3.11.2-6"
+        },
+        {
+            "name": "python3.11-minimal",
+            "version": "3.11.2-6"
+        },
+        {
+            "name": "qemu-utils",
+            "version": "1:7.2+dfsg-7+deb12u5"
+        },
+        {
+            "name": "readline-common",
+            "version": "8.2-1.3"
+        },
+        {
+            "name": "reportbug",
+            "version": "12.0.0"
+        },
+        {
+            "name": "rsyslog",
+            "version": "8.2302.0-1"
+        },
+        {
+            "name": "runit-helper",
+            "version": "2.15.2"
+        },
+        {
+            "name": "sed",
+            "version": "4.9-1"
+        },
+        {
+            "name": "sensible-utils",
+            "version": "0.0.17+nmu1"
+        },
+        {
+            "name": "sudo",
+            "version": "1.9.13p3-1+deb12u1"
+        },
+        {
+            "name": "systemd",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "systemd-sysv",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "systemd-timesyncd",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "sysvinit-utils",
+            "version": "3.06-4"
+        },
+        {
+            "name": "tar",
+            "version": "1.34+dfsg-1.2+deb12u1"
+        },
+        {
+            "name": "tasksel",
+            "version": "3.73"
+        },
+        {
+            "name": "tasksel-data",
+            "version": "3.73"
+        },
+        {
+            "name": "traceroute",
+            "version": "1:2.1.2-1"
+        },
+        {
+            "name": "tzdata",
+            "version": "2024a-0+deb12u1"
+        },
+        {
+            "name": "ucf",
+            "version": "3.0043+nmu1"
+        },
+        {
+            "name": "udev",
+            "version": "252.22-1~deb12u1"
+        },
+        {
+            "name": "unattended-upgrades",
+            "version": "2.9.1+nmu3"
+        },
+        {
+            "name": "usr-is-merged",
+            "version": "37~deb12u1"
+        },
+        {
+            "name": "usrmerge",
+            "version": "37~deb12u1"
+        },
+        {
+            "name": "util-linux",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "util-linux-extra",
+            "version": "2.38.1-5+b1"
+        },
+        {
+            "name": "vim-common",
+            "version": "2:9.0.1378-2"
+        },
+        {
+            "name": "vim-tiny",
+            "version": "2:9.0.1378-2"
+        },
+        {
+            "name": "wamerican",
+            "version": "2020.12.07-2"
+        },
+        {
+            "name": "wget",
+            "version": "1.21.3-1+b2"
+        },
+        {
+            "name": "whiptail",
+            "version": "0.52.23-1+b1"
+        },
+        {
+            "name": "xz-utils",
+            "version": "5.4.1-0.2"
+        },
+        {
+            "name": "zlib1g:amd64",
+            "version": "1:1.2.13.dfsg-1"
+        }
+    ]
+}

@@ -19,3 +19,13 @@
 
 # Go workspace file
 go.work
+
+################################################################################
+#
+# Project specific stuff.
+
+# Ignore the JSON stuff.
+json/
+
+# Ignore the binary itself.
+meikkalainen

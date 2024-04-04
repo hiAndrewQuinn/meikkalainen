@@ -20,6 +20,64 @@ Specifically, `meikkalainen` will dump 2 JSON files of coarse-grained machine de
 meikkalainen someone@debian-1                    # JSON dump only
 ```
 
+Currently the JSON looks like this - there's no schema yet, because this could still use some work.
+
+```json
+
+{
+    "timestamp": "2024-04-04T08:39:59.712473827+03:00",
+    "debian_version": "12.5\n",
+    "architecture": "x86_64",
+    "kernel_version": "6.1.0-18-amd64",
+    "installed_modules": [
+        "ac",
+        "aesni_intel",
+        "ahci",
+        "vmwgfx",
+        ...
+        "wmi",
+        "x_tables"
+    ],
+    "network_config": {
+        "ip_addresses": [
+            "10.0.2.15"
+        ],
+        "interfaces": [
+            "eth0",
+            "lo"
+        ],
+        "routing_info": "default via 10.0.2.2 dev eth0 \n10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15"
+    },
+    "units": [
+        {
+            "name": "-.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "Root Mount"
+        },
+        ...
+        {
+            "name": "vagrant.mount",
+            "load_state": "loaded",
+            "active_state": "active",
+            "description": "/vagrant"
+        },
+    ],
+    "libraries": [
+        {
+            "name": "adduser",
+            "version": "3.134"
+        },
+        ...
+        {
+            "name": "zlib1g:amd64",
+            "version": "1:1.2.13.dfsg-1"
+        }
+    ]
+}
+```
+
+
 or even run multiple dumps with something like
 
 ```bash
