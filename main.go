@@ -7,6 +7,8 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
+	"os/user"
 	"path/filepath"
 	"sort"
 	"strconv"
@@ -56,8 +58,10 @@ type InstalledLib struct {
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: meikkalainen [user@hostname --private-key path/to/key]...")
-		os.Exit(1)
+		// No arguments provided - scan local machine
+		fmt.Println("No hosts specified. Scanning local machine...")
+		handleLocalHost()
+		return
 	}
 
 	hostConfigs, err := parseHostConfigs(os.Args[1:])
@@ -113,6 +117,36 @@ func parseHostConfigs(args []string) ([]HostConfig, error) {
 	return hostConfigs, nil
 }
 
+func handleLocalHost() {
+	// Get current user and hostname
+	currentUser, err := user.Current()
+	if err != nil {
+		fmt.Printf("Failed to get current user: %v\n", err)
+		return
+	}
+
+	hostname, err := os.Hostname()
+	if err != nil {
+		fmt.Printf("Failed to get hostname: %v\n", err)
+		return
+	}
+
+	fmt.Printf("Scanning local machine: %s@%s\n", currentUser.Username, hostname)
+
+	// Use local executor to fetch data
+	executor := &LocalExecutor{}
+	details, err := fetchDataWithExecutor(executor)
+	if err != nil {
+		fmt.Printf("Failed to fetch data for local machine: %v\n", err)
+		return
+	}
+
+	// Serialize details to JSON and save
+	if err := saveDetailsAsJSON(hostname, currentUser.Username, details); err != nil {
+		fmt.Printf("Failed to save data for local machine: %v\n", err)
+	}
+}
+
 func handleHost(config HostConfig) {
 	fmt.Printf("Handling host: %s with private key: %s\n", config.Hostname, config.PrivateKeyPath)
 
@@ -155,7 +189,28 @@ func handleHost(config HostConfig) {
 	}
 }
 
-func fetchData(client *ssh.Client) (*DebianSystemDetails, error) {
+// CommandExecutor defines the interface for executing commands
+type CommandExecutor interface {
+	Execute(command string) (string, error)
+}
+
+// SSHExecutor executes commands over SSH
+type SSHExecutor struct {
+	client *ssh.Client
+}
+
+func (e *SSHExecutor) Execute(command string) (string, error) {
+	return executeCommand(e.client, command)
+}
+
+// LocalExecutor executes commands locally
+type LocalExecutor struct{}
+
+func (e *LocalExecutor) Execute(command string) (string, error) {
+	return executeLocalCommand(command)
+}
+
+func fetchDataWithExecutor(executor CommandExecutor) (*DebianSystemDetails, error) {
 	// Initialize the details structure with the current timestamp.
 	details := DebianSystemDetails{
 		Timestamp: time.Now(),
@@ -163,27 +218,27 @@ func fetchData(client *ssh.Client) (*DebianSystemDetails, error) {
 
 	var err error
 	// Fetch Debian version.
-	details.DebianVersion, err = executeCommand(client, "cat /etc/debian_version")
+	details.DebianVersion, err = executor.Execute("cat /etc/debian_version")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching Debian version: %w", err)
 	}
 
 	// Fetch architecture
-	architecture, err := executeCommand(client, "uname -m")
+	architecture, err := executor.Execute("uname -m")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching architecture: %w", err)
 	}
 	details.Architecture = strings.TrimSpace(architecture)
 
 	// Fetch kernel version
-	kernelVersion, err := executeCommand(client, "uname -r")
+	kernelVersion, err := executor.Execute("uname -r")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching kernel version: %w", err)
 	}
 	details.KernelVersion = strings.TrimSpace(kernelVersion)
 
 	// Fetch installed kernel modules
-	installedModulesOutput, err := executeCommand(client, "lsmod")
+	installedModulesOutput, err := executor.Execute("lsmod")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching installed kernel modules: %w", err)
 	}
@@ -191,39 +246,44 @@ func fetchData(client *ssh.Client) (*DebianSystemDetails, error) {
 	sort.Strings(details.InstalledModules)
 
 	// Fetch network configuration
-	ipAddressesOutput, err := executeCommand(client, "hostname -I")
+	ipAddressesOutput, err := executor.Execute("hostname -I")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching IP addresses: %w", err)
 	}
 	details.NetworkConfig.IPAddresses = strings.Fields(strings.TrimSpace(ipAddressesOutput))
 
-	interfacesOutput, err := executeCommand(client, "ls /sys/class/net")
+	interfacesOutput, err := executor.Execute("ls /sys/class/net")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching network interfaces: %w", err)
 	}
 	details.NetworkConfig.Interfaces = strings.Fields(strings.TrimSpace(interfacesOutput))
 
-	routingInfoOutput, err := executeCommand(client, "ip route")
+	routingInfoOutput, err := executor.Execute("ip route")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching routing information: %w", err)
 	}
 	details.NetworkConfig.RoutingInfo = strings.TrimSpace(routingInfoOutput)
 
 	// Fetch systemd unit states.
-	unitOutput, err := executeCommand(client, "systemctl list-units --output=export | tail -n +2 | sort")
+	unitOutput, err := executor.Execute("systemctl list-units --output=export | tail -n +2 | sort")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching systemd unit states: %w", err)
 	}
 	details.SystemdUnits = parseSystemdOutput(unitOutput)
 
 	// Fetch installed libraries with dpkg.
-	libOutput, err := executeCommand(client, "dpkg-query --show")
+	libOutput, err := executor.Execute("dpkg-query --show")
 	if err != nil {
 		return nil, fmt.Errorf("error fetching installed libraries: %w", err)
 	}
 	details.Libraries = parseDpkgOutput(libOutput)
 
 	return &details, nil
+}
+
+func fetchData(client *ssh.Client) (*DebianSystemDetails, error) {
+	executor := &SSHExecutor{client: client}
+	return fetchDataWithExecutor(executor)
 }
 
 func saveDetailsAsJSON(hostname, user string, details *DebianSystemDetails) error {
@@ -283,6 +343,19 @@ func executeCommand(client *ssh.Client, command string) (string, error) {
 	var stdoutBuf bytes.Buffer
 	session.Stdout = &stdoutBuf
 	err = session.Run(command)
+	if err != nil {
+		return "", fmt.Errorf("failed to run command '%s': %w", command, err)
+	}
+
+	return stdoutBuf.String(), nil
+}
+
+// executeLocalCommand executes a shell command on the local system and returns the output.
+func executeLocalCommand(command string) (string, error) {
+	cmd := exec.Command("sh", "-c", command)
+	var stdoutBuf bytes.Buffer
+	cmd.Stdout = &stdoutBuf
+	err := cmd.Run()
 	if err != nil {
 		return "", fmt.Errorf("failed to run command '%s': %w", command, err)
 	}
